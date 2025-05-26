@@ -27,7 +27,7 @@ export function ProductScanChart() {
         <Line
           type="monotone"
           dataKey="This Year"
-          stroke="#4ade80"
+          stroke="#9FE870"
           strokeWidth={3}
           dot={{ r: 0 }}
           activeDot={{ r: 6, strokeWidth: 0 }}
@@ -35,7 +35,7 @@ export function ProductScanChart() {
         <Line
           type="monotone"
           dataKey="Last Year"
-          stroke="#60a5fa"
+          stroke="#93E0FB"
           strokeWidth={3}
           dot={{ r: 0 }}
           activeDot={{ r: 6, strokeWidth: 0 }}
@@ -49,12 +49,12 @@ export function ProductScanChart() {
                 {
                   label: "This Year",
                   value: (value) => `${value} scans`,
-                  color: "#4ade80",
+                  color: "#9FE870",
                 },
                 {
                   label: "Last Year",
                   value: (value) => `${value} scans`,
-                  color: "#60a5fa",
+                  color: "#93E0FB",
                 },
               ]}
             />

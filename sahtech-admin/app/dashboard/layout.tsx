@@ -18,7 +18,7 @@ export default function DashboardLayout({
           <div className="hidden md:block">
             <DashboardSidebar />
           </div>
-          <main className="flex-1 overflow-y-auto bg-gray-50 p-6 dark:bg-gray-900">{children}</main>
+          <main className="flex-1 overflow-y-auto bg-white dark:bg-gray-950 p-6">{children}</main>
         </div>
       </div>
     </ThemeProvider>

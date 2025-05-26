@@ -72,14 +72,14 @@ export function ProfileForm() {
         <CardContent className="flex flex-col items-center justify-center space-y-4">
           <Avatar className="h-32 w-32">
             <AvatarImage src="/assets/images/raouff.jpg" alt="Profile" />
-            <AvatarFallback className="text-4xl bg-teal-600 text-white">
+            <AvatarFallback className="text-4xl bg-sahtech-green text-white">
               {formData.name
                 .split(" ")
                 .map((n) => n[0])
                 .join("")}
             </AvatarFallback>
           </Avatar>
-          <Button variant="outline">Upload New Picture</Button>
+          <Button variant="outline" className="hover:bg-sahtech-blue hover:text-white transition-colors">Upload New Picture</Button>
         </CardContent>
       </Card>
 
@@ -171,7 +171,7 @@ export function ProfileForm() {
             </div>
           </CardContent>
           <CardFooter className="flex justify-end">
-            <Button type="submit" disabled={isLoading}>
+            <Button type="submit" disabled={isLoading} className="bg-sahtech-green hover:bg-sahtech-green/90 text-white">
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

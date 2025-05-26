@@ -26,12 +26,20 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#9FE870",
+          light: "#b5ed91",
+          dark: "#8ad654",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#93E0FB",
+          light: "#aae7fc",
+          dark: "#7cd9fa",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        sahtech: {
+          green: "#9FE870",
+          blue: "#93E0FB",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

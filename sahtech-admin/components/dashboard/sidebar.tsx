@@ -70,32 +70,35 @@ export function DashboardSidebar() {
 
   return (
     <SidebarProvider>
-      <Sidebar className="border-r border-gray-200 dark:border-gray-800">
+      <Sidebar className="border-r border-sahtech-blue/10 bg-white dark:bg-gray-950">
         <SidebarHeader>
           <div className="flex items-center px-4 py-2">
             <img src="/logo.png" alt="Sahtech Logo" className="h-10 w-auto" />
-            <span className="ml-2 text-xl font-bold text-green-600 dark:text-green-400">Sahtech</span>
           </div>
           <form onSubmit={handleSearch} className="px-4 py-2">
             <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
+              <Search className="absolute left-2 top-2.5 h-4 w-4 text-sahtech-blue/70" />
               <Input
                 placeholder="Search..."
-                className="pl-8"
+                className="pl-8 bg-sahtech-blue/10 border-sahtech-blue/20 placeholder:text-sahtech-blue/50"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
           </form>
         </SidebarHeader>
-        <SidebarSeparator />
+        <SidebarSeparator className="bg-sahtech-blue/10" />
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Main</SidebarGroupLabel>
+            <SidebarGroupLabel className="text-sahtech-blue">Main</SidebarGroupLabel>
             <SidebarMenu>
               {mainNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton asChild isActive={pathname === item.href}>
+                  <SidebarMenuButton 
+                    asChild 
+                    isActive={pathname === item.href}
+                    className={pathname === item.href ? "bg-sahtech-green/20 text-sahtech-green" : "hover:bg-sahtech-blue/10 hover:text-sahtech-blue"}
+                  >
                     <Link href={item.href}>
                       <item.icon className="h-5 w-5" />
                       <span>{item.label}</span>
@@ -107,11 +110,15 @@ export function DashboardSidebar() {
           </SidebarGroup>
 
           <SidebarGroup>
-            <SidebarGroupLabel>Analytics</SidebarGroupLabel>
+            <SidebarGroupLabel className="text-sahtech-blue">Analytics</SidebarGroupLabel>
             <SidebarMenu>
               {analyticsNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton asChild isActive={pathname === item.href}>
+                  <SidebarMenuButton 
+                    asChild 
+                    isActive={pathname === item.href}
+                    className={pathname === item.href ? "bg-sahtech-green/20 text-sahtech-green" : "hover:bg-sahtech-blue/10 hover:text-sahtech-blue"}
+                  >
                     <Link href={item.href}>
                       <item.icon className="h-5 w-5" />
                       <span>{item.label}</span>
@@ -123,11 +130,15 @@ export function DashboardSidebar() {
           </SidebarGroup>
 
           <SidebarGroup>
-            <SidebarGroupLabel>Account</SidebarGroupLabel>
+            <SidebarGroupLabel className="text-sahtech-blue">Account</SidebarGroupLabel>
             <SidebarMenu>
               {accountNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton asChild isActive={pathname === item.href}>
+                  <SidebarMenuButton 
+                    asChild 
+                    isActive={pathname === item.href}
+                    className={pathname === item.href ? "bg-sahtech-green/20 text-sahtech-green" : "hover:bg-sahtech-blue/10 hover:text-sahtech-blue"}
+                  >
                     <Link href={item.href}>
                       <item.icon className="h-5 w-5" />
                       <span>{item.label}</span>
@@ -139,16 +150,18 @@ export function DashboardSidebar() {
           </SidebarGroup>
         </SidebarContent>
         <SidebarFooter>
-          <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">
-            Logged in as <span className="font-medium text-teal-600 dark:text-teal-400">{username}</span>
+          <div className="px-4 py-2 text-sm text-sahtech-blue/70">
+            Logged in as <span className="font-medium text-sahtech-blue">{username}</span>
           </div>
           <SidebarMenu>
             <SidebarMenuItem className="relative">
-              <SidebarMenuButton onClick={handleLogout} className="relative">
+              <SidebarMenuButton 
+                onClick={handleLogout} 
+                className="hover:bg-sahtech-blue/10 hover:text-sahtech-blue"
+              >
                 <LogOut className="h-5 w-5" />
                 <span>Logout</span>
               </SidebarMenuButton>
-              <div className="absolute right-1 top-1.5" style={{ display: 'none' }}></div>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarFooter>

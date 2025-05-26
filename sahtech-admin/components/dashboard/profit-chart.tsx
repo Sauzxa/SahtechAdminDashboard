@@ -24,8 +24,8 @@ export function ProfitChart() {
           tickLine={false}
           tick={{ fill: "#888", fontSize: 12 }}
         />
-        <Bar dataKey="nutritionists" stackId="a" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
-        <Bar dataKey="brands" stackId="a" fill="#06b6d4" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="nutritionists" stackId="a" fill="#9FE870" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="brands" stackId="a" fill="#93E0FB" radius={[4, 4, 0, 0]} />
         <ChartTooltip
           cursor={{ fill: "rgba(0, 0, 0, 0.05)" }}
           content={
@@ -35,17 +35,17 @@ export function ProfitChart() {
                 {
                   label: "Nutritionists",
                   value: (value) => `$${value}`,
-                  color: "#8b5cf6",
+                  color: "#9FE870",
                 },
                 {
                   label: "Brands",
                   value: (value) => `$${value}`,
-                  color: "#06b6d4",
+                  color: "#93E0FB",
                 },
                 {
                   label: "Total",
                   value: (_, __, item) => `$${item.nutritionists + item.brands}`,
-                  color: "#14b8a6",
+                  color: "#93E0FB",
                 },
               ]}
             />

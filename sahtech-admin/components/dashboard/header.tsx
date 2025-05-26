@@ -45,7 +45,7 @@ export function DashboardHeader() {
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background px-4 md:px-6">
-      <div className="flex items-center gap-2 md:hidden">
+      <div className="flex items-center gap-4">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
@@ -57,18 +57,20 @@ export function DashboardHeader() {
             <DashboardSidebar />
           </SheetContent>
         </Sheet>
-        <img src="/logo.png" alt="Sahtech Logo" className="h-8 w-auto md:hidden" />
+        <div className="flex items-center gap-2">
+          <img src="/logo.png" alt="Sahtech Logo" className="h-8 w-auto" />
+        </div>
       </div>
 
-      <div className="flex w-full items-center justify-between gap-2 md:justify-end">
+      <div className="flex w-full items-center justify-end gap-2 md:justify-end">
         <div className="w-full max-w-md lg:max-w-lg md:flex-1">
           <div className="relative">
             <input
               type="search"
               placeholder="Search..."
-              className="h-9 w-full rounded-full bg-gray-100 px-4 pl-9 text-sm placeholder:text-gray-500 dark:bg-gray-800"
+              className="h-9 w-full rounded-full bg-sahtech-blue/10 px-4 pl-9 text-sm placeholder:text-sahtech-blue/50 dark:bg-sahtech-blue/5"
             />
-            <div className="absolute left-3 top-2.5 text-gray-500">
+            <div className="absolute left-3 top-2.5 text-sahtech-blue/70">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -85,7 +87,7 @@ export function DashboardHeader() {
               <Button variant="ghost" className="relative flex items-center gap-2 rounded-full px-2 py-1.5">
                 <Avatar className="h-8 w-8">
                   <AvatarImage src="/assets/images/raouff.jpg" alt={userData?.name || "User"} />
-                  <AvatarFallback className="bg-green-600 text-white">
+                  <AvatarFallback className="bg-sahtech-green text-white">
                     {userData?.name
                       ?.split(" ")
                       .map((n) => n[0])
