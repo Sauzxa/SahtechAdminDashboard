@@ -84,7 +84,7 @@ export function DashboardHeader() {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="relative flex items-center gap-2 rounded-full px-2 py-1.5">
                 <Avatar className="h-8 w-8">
-                  <AvatarImage src="/placeholder.svg" alt={userData?.name || "User"} />
+                  <AvatarImage src="/assets/images/raouff.jpg" alt={userData?.name || "User"} />
                   <AvatarFallback className="bg-green-600 text-white">
                     {userData?.name
                       ?.split(" ")

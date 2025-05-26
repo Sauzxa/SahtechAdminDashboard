@@ -71,7 +71,7 @@ export function ProfileForm() {
         </CardHeader>
         <CardContent className="flex flex-col items-center justify-center space-y-4">
           <Avatar className="h-32 w-32">
-            <AvatarImage src="/placeholder.svg" alt="Profile" />
+            <AvatarImage src="/assets/images/raouff.jpg" alt="Profile" />
             <AvatarFallback className="text-4xl bg-teal-600 text-white">
               {formData.name
                 .split(" ")
